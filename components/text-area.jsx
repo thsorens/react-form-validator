@@ -17,7 +17,7 @@ const Select = (props) => {
       <Label>
         {props.label}
       </Label>
-      <Input invalid={!!invalid} id={props.name} type="textarea" value={value || ''} onChange={ev => update(props.name, ev.target.value)} />
+      <Input invalid={!!invalid} id={props.name} type="textarea" value={value || ''} onChange={ev => update(ev.target.value)} />
       <FormFeedback>
         {invalid ? invalid.errorMessage : null}
       </FormFeedback>

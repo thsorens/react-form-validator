@@ -17,13 +17,13 @@ const Select = (props) => {
 
   const updateValue = (val) => {
     if (props.dependencies) {
-      props.dependencies.forEach(d => update(d, 0));
+      props.dependencies.forEach(d => update('-1', d));
     }
     update(val);
   };
 
   if (props.defaultText) {
-    const defaultOption = (<option key={`${props.defaultText}-0`} value="0">{props.defaultText}</option>);
+    const defaultOption = (<option key={`${props.defaultText}-0`} value="-1">{props.defaultText}</option>);
     opts = [defaultOption, ...props.options];
   }
   return (

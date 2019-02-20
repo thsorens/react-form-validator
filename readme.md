@@ -91,7 +91,7 @@ PropTypes:
 *  label: string,
 *  name: string,
 *  options: array of option tags (native html)
-*  defaultText: string : Will add an extra dropdown value on top with value 0 (ex "--Select some value from the list"),
+*  defaultText: string : Will add an extra dropdown value on top with value -1 (ex "--Select some value from the list"),
 *  dependencies: array, If you are using nested inputs that depends on eachother, you might want to zero out the underlings of your input
 *  rules: array
 
