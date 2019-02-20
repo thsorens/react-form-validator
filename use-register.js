@@ -11,14 +11,10 @@ export default (props) => {
   } = useContext(context);
 
   useEffect(() => {
-    if (props.rules && props.rules.length > 0) {
-      register(props.name, props.rules);
-    }
+    register(props.name, props.rules || []);
 
     return function cleanup() {
-      if (props.rules && props.rules.length > 0) {
-        unregister(props.name);
-      }
+      unregister(props.name);
     };
   }, []);
 
